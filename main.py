@@ -1,8 +1,10 @@
+from tkinter import messagebox
 from turtle import Screen
 from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 import time
+import tkinter
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -47,4 +49,3 @@ while game_is_on:
 
 
 
-screen.exitonclick()

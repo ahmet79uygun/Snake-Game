@@ -1,8 +1,9 @@
-from turtle import Turtle
+from turtle import Turtle, Screen
+
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
-
+screen = Screen()
 
 class Scoreboard(Turtle):
 
@@ -26,6 +27,7 @@ class Scoreboard(Turtle):
             self.high_score = self.score
             with open("my_file.txt", mode="w") as data:
                 data.write(f"{self.high_score}")
+            screen.onkey(exit(),"K")
         self.score = 0
         self.update_scoreboard()
 
